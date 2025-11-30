@@ -1,0 +1,410 @@
+body , html {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+body {
+            font-family: Arial;
+            margin: 0;
+            background: #f7f7f7;
+        }
+
+        /* NAVBAR */
+        .navbar {
+        background: #000000;
+        padding: 15px 30px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 4px solid #ffc400;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999; /* cukup besar */
+        box-sizing: border-box;
+
+        padding-right: 50px; /* ⬅ supaya cart icon tidak ketutup */
+}
+
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+        color: #ffc400;
+        }
+
+
+        .navbar img {
+            width: 40px;            /* ukuran foto */
+            height: 40px;
+            border-radius: 50%;     /* supaya bulat */
+            object-fit: cover;      /* biar gambar tidak gepeng */
+            margin-right: 10px;     /* jarak dengan teks */
+            vertical-align: middle; /* biar sejajar dengan tulisan */
+        }
+
+
+        /* CONTENT */
+        .container {
+            padding: 20px 30px;
+            margin-top: 80px; /* tinggi navbar + sedikit jarak */
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product button {
+            background: #ffc400;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #cart {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        #cart ul {
+            padding-left: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+        }
+
+        .order-button {
+            background: blue;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+        margin-top: 0; /* hapus jarak besar */
+        padding: 20px;
+        background: #000000;
+        text-align: center;
+        border-bottom: 5px solid #ffc400;
+        }
+
+        footer a {
+        color: #ffc400;
+         text-decoration: none;
+         margin: 0 5px;
+        }
+
+        footer a:hover {
+        text-decoration: underline;
+        }   
+
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background: white;
+            width: 350px;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .close-modal {
+            font-size: 25px;
+            float: right;
+            cursor: pointer;
+        }
+
+
+
+        /* ===== SIDEBAR CART ===== */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px; /* hidden */
+            width: 300px;
+            height: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: -3px 0 8px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            z-index: 10050; /* lebih tinggi dari navbar */
+            overflow-y: auto;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 10040;
+        }
+
+
+        /* HERO IMAGE */
+        .hero {
+            width: 100%;
+            position: relative;
+            margin-top: 70px;
+        }
+
+       .hero img {
+            width: 100%;
+            height: 600px;        /* sesuaikan */
+            object-fit: cover;
+            filter: blur(5px);    /* blur awal */
+          /*  transition: filter 0.4s ease;  biar halus ketika berubah */
+            transform: scale(1);
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+
+        /* saat hover */
+        .hero:hover img {
+            filter: blur(2px);   /* blur lebih tipis */
+            transform: scale(1.03); /* sedikit membesar */
+        }
+
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* Tombol MENU */
+        .menu-button {
+            padding: 12px 28px;
+            border: 2px solid #ffc400;
+            color: #ffc400;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+        }
+
+        .menu-button:hover {
+            background: #ffc400;
+            color: black;
+            transform: scale(1.1);
+        }
+
+
+        /* Badge notif keranjang*/
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 22px;
+            margin-left: 20px;
+            display: inline-block;
+
+            /* supaya tidak ketutup navbar lain */
+            z-index: inherit;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: red;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 10110;; /* lebih tinggi */
+        }
+
+
+            /* REVIEW SECTION */
+            .review-section {
+                padding: 50px 30px;
+                background: #fff;
+                text-align: center;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .review-section h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+                color: #000;
+            }
+
+            .reviews {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .review {
+                background: #f7f7f7;
+                padding: 20px;
+                border-radius: 10px;
+                max-width: 600px;
+                text-align: left;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .review span {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                color: #555;
+            }
+
+            .more-reviews {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: none;
+                background: #ffc400;
+                color: #000;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .more-reviews:hover {
+                background: #e6b800;
+            }
+
+            /* ABOUT US SECTION (tetap sama) */
+            .about-section {
+                padding: 50px 30px;
+                background: #fff8e1;
+                text-align: center;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                min-height: 350px; /* sesuaikan dengan kebutuhan */
+            }
+
+            .about-section h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                color: #000;
+            }
+
+            .about-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .about-content img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #ffc400;
+            }
+
+            .about-content p {
+                max-width: 600px;
+                text-align: left;
+                font-size: 16px;
+                color: #333;
+                line-height: 1.6;
+            }
+
+
+            .more-reviews {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: none;
+                background: #ffc400;
+                color: #000;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .more-reviews:hover {
+                background: #e6b800;
+            }
+
+
+            /* Hapus jarak bawah supaya footer menempel */
+            .container:last-child,
+            .review-section,
+            .about-section {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+

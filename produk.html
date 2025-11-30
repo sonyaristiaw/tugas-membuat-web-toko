@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2><img src="profil pak gembus.png" alt=""> Ayam Geprek Pak Gembus</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="#Kontak">Kontak</a>
+        <span class="cart-icon" onclick="openCart()"> 🛒<span id="cartCount" class="cart-count">0</span></span>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+    <h1 style="text-align: center;">Makanan</h1>
+
+    <div style="display:flex; gap:20px; flex-wrap: wrap;">
+
+       <div class="product" data-name="Paket 1" data-price="15000">
+        <img src="paket 1.jpg">
+        <h3>Paket 1</h3>
+        <p>Rp 15.000</p>
+
+        <select class="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+
+
+        <div class="product" data-name="Paket 2" data-price="17000">
+            <img src="paket 2.jpg" alt="Basreng Pedas">
+            <h3>Paket 2</h3>
+            <p>Rp 17.000</p>
+
+            <select class="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Paket 3" data-price="19000">
+            <img src="paket 3.jpg" alt="Makaroni">
+            <h3>Paket 3</h3>
+            <p>Rp 19.000</p>
+
+            <select class="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product" data-name="Ayam Tanpa Nasi" data-price="12000">
+            <img src="Ayam Tanpa Nasi.jpg" alt="Makaroni">
+            <h3>Ayam Tanpa Nasi</h3>
+            <p>Rp 12.000</p>
+
+            <select class="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Nasi Putih" data-price="3000">
+            <img src="Nasi Putih.jpg" alt="Makaroni">
+            <h3>Nasi Putih</h3>
+            <p>Rp 3.000</p>
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Kol Goreng" data-price="5000">
+            <img src="Kol Goreng.jpg" alt="Makaroni">
+            <h3>Kol Goreng</h3>
+            <p>Rp 5.000</p>
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Sambal Bawang" data-price="5000">
+            <img src="Sambal Bawang.jpg" alt="Makaroni">
+            <h3>Sambal Bawang</h3>
+            <p>Rp 5.000</p>
+
+            <select class="level-select">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+
+        <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <h1 style="text-align: center;">Minuman</h1>
+    <div style="display:flex; gap:20px; flex-wrap: wrap;">
+
+        <div class="product" data-name="Es Teh Manis" data-price="5000">
+            <img src="Es Teh.jpg" alt="Es Teh Manis">
+            <h3>Es Teh Manis</h3>
+            <p>Rp 5.000</p>
+            <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product" data-name="Teh Hangat" data-price="4000">
+            <img src="Teh Hangat.jpg" alt="Teh Hangat">
+            <h3>Teh Hangat</h3>
+            <p>Rp 4.000</p>
+            <button onclick="addProductWithLevel(this)">Tambah ke Keranjang</button>
+        </div>
+
+        
+        <div class="product" data-name="Orange" data-price="6000">
+            <img src="Orange.jpg" alt="Orange">
+            <h3>Jus Jeruk</h3>
+            <p>Rp 6.000</p>
+
+            <select class="level-select">
+            <option value="Es">Es</option>
+            <option value="Hangat">Hangat</option>
+            </select>
+            <button onclick="addProductWithLevel(this, 'Orange', 6000)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Milky Melon" data-price="8000">
+            <img src="Milky Melon.jpg" alt="Milky Melon">
+            <h3>Jus Jeruk</h3>
+            <p>Rp 8.000</p>
+            <select class="level-select">
+            <option value="Es">Es</option>
+            <option value="Hangat">Hangat</option>
+            </select>
+            <button onclick="addProductWithLevel(this, 'Milky Melon', 8000)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Air Putih" data-price="3000">
+            <img src="Air Putih.jpg" alt="Air Putih">
+            <h3>Air Putih</h3>
+            <p>Rp 3.000</p>
+            <select class="level-select">
+            <option value="Es">Es</option>
+            <option value="Hangat">Hangat</option>
+            </select>
+            <button onclick="addProductWithLevel(this, 'Air Putih', 3000)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Lemon Tea" data-price="6000">
+            <img src="Lemon Tea.jpg" alt="Lemon Tea">
+            <h3>Lemon Tea</h3>
+            <p>Rp 6.000</p>
+            <select class="level-select">
+            <option value="Es">Es</option>
+            <option value="Hangat">Hangat</option>
+            </select>
+            <button onclick="addProductWithLevel(this, 'Jus Jeruk', 6000)">Tambah ke Keranjang</button>
+        </div>
+
+
+        <div class="product" data-name="Lychee Tea" data-price="7000">
+            <img src="Lychee Tea.jpg" alt="Lychee Tea">
+            <h3>Lychee Tea</h3>
+            <p>Rp 7.000</p>
+            <select class="level-select">
+            <option value="Es">Es</option>
+            <option value="Hangat">Hangat</option>
+            </select>
+            <button onclick="addProductWithLevel(this, 'Lychee Tea', 7000)">Tambah ke Keranjang</button>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!-- SIDEBAR CART (HARUS DI LUAR NAVBAR) -->
+<div id="cartSidebar" class="cart-sidebar">
+    <span class="close-btn" onclick="closeCart()">×</span>
+    <h2>Keranjang Belanja</h2>
+    <ul id="cartList"></ul>
+    <h3>Total: Rp <span id="totalPrice">0</span></h3>
+    <button class="order-button" onclick="orderWhatsApp()">Order via WhatsApp</button>
+</div>
+
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+<!-- FOOTER -->
+<footer id="Kontak">
+    <p style="color: white;">Hubungi Kami:</p>
+    <a href="https://wa.me/6282377058089" target="_blank">WhatsApp</a> |
+    <a href="https://www.instagram.com/ayamgepuk_pusat/?hl=en" target="_blank">Instagram</a> |
+    <a href="mailto:toko@example.com">Email</a>
+    <br><br>
+    <small style="color: white;">&copy; 2025 Ayam Geprek</small>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

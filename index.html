@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2><img src="profil pak gembus.png" alt=""> Ayam Geprek Pak Gembus</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#Kontak">Kontak</a>
+        <span class="cart-icon" onclick="openCart()"> 🛒<span id="cartCount" class="cart-count">0</span></span>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <img src="pak gembus 2.jfif" alt="Ayam Geprek Pak Gembus">
+
+    <div class="hero-text">
+        <h1>Ayam Geprek Pak Gembus — Fresh, Crispy, & Premium</h1>
+        <p>Ciri khas sambal bawang asli, bumbu rahasia sejak 2009.</p>
+
+        <!-- Tombol MENU -->
+        <a href="produk.html" class="menu-button">Lihat Menu</a>
+    </div>
+</div>
+
+
+<!-- REVIEW SECTION -->
+<div class="review-section">
+    <h2>Review Pelanggan</h2>
+    <div class="reviews">
+        <div class="review">
+            <p>"Ayam geprek paling enak yang pernah saya coba! Sambalnya pedas tapi mantap."</p>
+            <span>- Rina, Jakarta</span>
+        </div>
+        <div class="review">
+            <p>"Pelayanan cepat, ayamnya selalu crispy. Recommended banget!"</p>
+            <span>- Budi, Bandung</span>
+        </div>
+        <div class="review">
+            <p>"Suka banget sama sambal bawangnya. Rasanya khas dan nggak pernah bosan."</p>
+            <span>- Sari, Surabaya</span>
+        </div>
+        <button class="more-reviews">Lihat Lebih Banyak Review</button>
+    </div>
+</div>
+
+
+<!-- ABOUT US SECTION -->
+<div class="about-section">
+    <h2>Tentang Kami</h2>
+    <div class="about-content">
+        <img src="profil pak gembus.png" alt="Ayam Geprek Pak Gembus">
+        <p>
+            Ayam Geprek Pak Gembus berdiri sejak 2009 dengan ciri khas sambal bawang asli yang pedas dan nikmat.  
+            Kami selalu menjaga kualitas ayam yang fresh, crispy, dan menggunakan bumbu rahasia agar setiap gigitan selalu terasa spesial.  
+            Pelayanan cepat dan ramah adalah komitmen kami untuk membuat pelanggan puas setiap kali berkunjung atau memesan.
+        </p>
+    </div>
+</div>
+
+
+
+
+<!-- SIDEBAR CART (HARUS DI LUAR NAVBAR) -->
+<div id="cartSidebar" class="cart-sidebar">
+    <span class="close-btn" onclick="closeCart()">×</span>
+    <h2>Keranjang Belanja</h2>
+    <ul id="cartList"></ul>
+    <h3>Total: Rp <span id="totalPrice">0</span></h3>
+    <button class="order-button" onclick="orderWhatsApp()">Order via WhatsApp</button>
+</div>
+
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+<!-- FOOTER -->
+<footer id="Kontak">
+    <p style="color: white;" >Hubungi Kami:</p>
+    <a href="https://wa.me/6282377058089" target="_blank">WhatsApp</a> |
+    <a href="https://www.instagram.com/ayamgepuk_pusat/?hl=en" target="_blank">Instagram</a> |
+    <a href="mailto:toko@example.com">Email</a>
+    <br><br>
+    <small style="color: white;" >&copy; 2025 Ayam Geprek </small>
+</footer>
+
+
+<script src="script.js">
+    
+</script>
+
+</body>
+</html>
